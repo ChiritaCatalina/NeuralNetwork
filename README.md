@@ -12,6 +12,9 @@ https://www.pyimagesearch.com/2019/02/04/keras-multiple-inputs-and-mixed-data/
 
 
 Teorie
+
 https://keras.io/layers/recurrent/
+
 http://arunmallya.github.io/writeups/nn/lstm/index.html
+
 https://towardsdatascience.com/understanding-lstm-and-its-quick-implementation-in-keras-for-sentiment-analysis-af410fd85b47
