@@ -9,6 +9,7 @@ https://adventuresinmachinelearning.com/keras-lstm-tutorial/
 
 Convolutional, nu se aplica pentru cazul nostru
 https://www.pyimagesearch.com/2019/02/04/keras-multiple-inputs-and-mixed-data/
+https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwiIwc3As9XkAhUQ2aQKHVbZB-kQFjAAegQIABAB&url=https%3A%2F%2Fhackernoon.com%2Fbuild-your-first-neural-network-to-predict-house-prices-with-keras-3fb0839680f4&usg=AOvVaw3vYO2fIQnb5-uCnHk2vz-D
 
 
 Teorie
