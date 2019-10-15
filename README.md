@@ -22,5 +22,6 @@ https://towardsdatascience.com/understanding-lstm-and-its-quick-implementation-i
 
 
 Web App
+
 https://towardsdatascience.com/how-to-write-web-apps-using-simple-python-for-data-scientists-a227a1a01582
 https://towardsdatascience.com/coding-ml-tools-like-you-code-ml-models-ddba3357eace
