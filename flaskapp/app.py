@@ -41,6 +41,7 @@ def hello():
                 ind.append(p)
             pred = model.predict(scaler.transform(ind))
             pval = scaler.inverse_transform(pred)
+            flask(pval)
             print(pval)
 
 
