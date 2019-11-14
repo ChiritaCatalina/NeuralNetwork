@@ -1,6 +1,9 @@
 from flask import Flask, render_template, flash, request
 import wtforms
 from wtforms import Form, TextField, TextAreaField, validators, StringField, SubmitField
+import keras
+from keras.models import load_model
+import numpy as np
 
 # App config.
 DEBUG = True
@@ -9,6 +12,7 @@ app.config.from_object(__name__)
 app.config['SECRET_KEY'] = '7d441f27d441f27567d441f2b6176a'
 
 class ReusableForm(Form):
+    treapta = wtforms.SelectField('Treapta', choices=[('1','4TLX_accel_80_Nm.sav'),('2','model'),('3','ceva')])
     p1 = wtforms.DecimalField('P1: ', validators=[validators.required])
     p2 = wtforms.DecimalField('P1: ', validators=[validators.required])
     p3 = wtforms.DecimalField('P1: ', validators=[validators.required])
@@ -28,9 +32,17 @@ def hello():
         p4=request.form['p4']
         p5=request.form['p5']
         p6=request.form['p6']
+        treapta = request.form['treapta']
         if form.validate():
-            print('ók')
-        print(p1,p2,p3,p4,p5,p6)
+            model = joblib.load('model%s' % treapta)
+            scaler = joblib.load('weights%s' % treapta)
+            ind = []
+            for p in [p1, p2, p3, p4, p5, p6]:
+                ind.append(p)
+            pred = model.predict(scaler.transform(ind))
+            pval = scaler.inverse_transform(pred)
+            print(pval)
+
 
     return render_template('hello.html', form=form)
 
