@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<title>Machine Learning For Whining Noise</title>
+<head> 
+<title>Machine Learning For Whining Noise</title>
+
+<style>
+        
+        h1 {
+          color: black;
+          text-align: center;
+        }
+    
+
+        .inputtext {
+          color: black;
+          text-align: center;
+          font-weight: bold;
+        }
+
+        .inputsubmit {
+          color: black;
+          text-align: center;
+        }
+
+        .answer {
+          color: black;
+          text-align: center;
+          font-weight: bold;
+          font-size: 20px;
+        }
+        
+        
+
+        </style>
+</head>
+<body>
+<h1>Machine Learning For Whining Noise</h1>
+
+<form action="" method="post">
+{{ form.csrf }} 
+<div class="inputtext">{{ form.treapta.label}} {{ form.treapta}}</div><br>
+<div class="inputtext">{{ form.p1.label }} {{ form.p1 }}</div><br>
+<div class="inputtext">{{ form.p2.label }} {{ form.p2 }}</div><br>
+<div class="inputtext">{{ form.p3.label }} {{ form.p3 }}</div><br>
+<div class="inputtext">{{ form.p4.label }} {{ form.p4 }}</div><br>
+<div class="inputtext">{{ form.p5.label }} {{ form.p5 }}</div><br>
+<div class="inputtext">{{ form.p6.label }} {{ form.p6 }}</div><br>
+<div class="inputsubmit">
+                <input type="submit" value="Submit"></div>
+     
+</form>
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<div class="answer">       
+<ul>
+     {% for message in messages %}
+ 	Answer : {{ message[1] }}
+{% endfor %}</ul> </div>
+{% endif %}
+{% endwith %}
+</body>
+</html>
